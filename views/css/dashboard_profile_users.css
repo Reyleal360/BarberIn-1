@@ -1,207 +1,378 @@
-:root{
-  --bg:#f5f7fa;
-  --panel:#ffffff;
-  --g100:#f0f0f0;
-  --g200:#e8e8e8;
-  --g300:#e0e0e0;
-  --g400:#d3d3d3;
-  --g500:#bfbfbf;
-  --ink:#1d1d1d;
-  --soft-radius:14px;
-}
+  /* Reset básico */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
-  background:#eceff3;
-  color:#222;
-}
+  html, body {
+    height: 100vh;
+    overflow: hidden;
+  }
 
-.wrapper{
-  max-width:1200px;
-  margin:32px auto;
-  padding:24px;
-  background:var(--bg);
-  border:1px solid var(--g300);
-  border-radius:18px;
-  box-shadow:0 4px 24px rgba(0,0,0,.05);
-  display:grid;
-  grid-template-rows:auto 1fr auto;
-  gap:20px;
-}
+  body {
+    font-family: 'Arial Black', Arial, sans-serif;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
 
-/* Header */
-.header{
-  display:grid;
-  grid-template-columns: 1fr minmax(300px,520px) 1fr;
-  gap:18px;
-  align-items:center;
-}
-.logo{
-  display:flex; align-items:center; gap:10px;
-}
-.logo .dot{
-  width:36px;height:36px;border-radius:50%;
-  background:var(--g300); border:1.5px solid var(--g400);
-}
-.logo small{color:#555}
-.search{
-  display:flex; align-items:center; gap:10px;
-  background:#fff; border:1.5px solid var(--g400);
-  border-radius:999px; padding:10px 14px;
-}
-.search::before{
-  content:"🔎"; opacity:.7;
-}
-.search input{
-  appearance:none; border:0; outline:0; width:100%;
-  background:transparent; font-size:15px;
-}
-.header-right{
-  display:flex; align-items:center; justify-content:flex-end; gap:10px;
-}
-.user-box{
-  width:78px;height:78px; border:2px solid #000;
-  border-radius:14px; background:#fff;
-  display:grid; place-items:center; font-size:38px; line-height:1;
-}
-.edit-icon{font-size:18px;}
-/* Main layout */
-.main{
-  display:grid;
-  grid-template-columns: 320px 1fr 280px;
-  gap:22px;
-  min-height:520px;
-}
+  /* Header título */
+  .header {
+    padding: 10px 20px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    flex-shrink: 0;
+  }
 
-/* Left panel - Agenda */
-.panel{
-  background:var(--panel);
-  border:1.5px solid var(--g400);
-  border-radius:var(--soft-radius);
-  padding:16px;
-  position:relative;
-}
-.panel .add-btn{
-  position:absolute; top:10px; left:10px;
-  width:32px;height:32px;border-radius:50%;
-  border:1.5px solid var(--ink);
-  background:#fff; font-weight:700; display:grid; place-items:center;
-}
-.agenda-title{
-  margin:0 0 12px 0; font-weight:800; letter-spacing:.6px;
-}
-.tabs{
-  display:flex; align-items:center; gap:10px; margin-bottom:12px;
-}
-.tab{
-  border:1.5px solid var(--g400);
-  background:var(--g300);
-  padding:8px 12px; border-radius:10px;
-  font-weight:600; font-size:14px;
-}
-.tabs .fav{
-  margin-left:auto; display:flex; align-items:center; gap:8px; color:#333;
-}
-.list{
-  background:var(--g100);
-  border:1.5px solid var(--g400);
-  border-radius:10px; padding:8px; display:grid; gap:8px;
-}
-.item{
-  display:grid; grid-template-columns: 28px 1fr 24px; gap:10px;
-  align-items:center;
-  background:#fff; border:1px solid var(--g400);
-  border-radius:8px; padding:8px 10px;
-}
-.item .ico{width:28px; height:28px; display:grid; place-items:center; background:var(--g300); border-radius:6px; font-size:16px}
-.item .name{font-size:13px; font-weight:700; color:#222}
-.item .star{justify-self:end; opacity:.6}
-.info-card{
-  margin-top:12px;
-  border:1.5px solid var(--g400);
-  background:var(--g200); border-radius:10px; padding:12px;
-}
-.info-card .title{
-  display:inline-block; background:#fff; border:1px solid var(--g400);
-  padding:6px 12px; border-radius:10px; font-weight:700; margin-bottom:10px;
-}
-.info-card .box{
-  height:140px; border:1.5px dashed var(--g500);
-  background:#fff; border-radius:8px;
-}
+  .header h2 {
+    margin: 0;
+    font-size: 20px;
+  }
 
-/* Center - Map */
-.map{
-  background: #e7e7e7;
-  border:3px solid #111;
-  border-radius:14px;
-  position:relative;
-  overflow:hidden;
-  min-height:520px;
-  display:block;
-}
-.map::before{
-  /* línea discontinua vertical estilo pliegue */
-  content:"";
-  position:absolute; inset:0;
-  background:
-    linear-gradient(90deg, transparent 49%, #111 50%, transparent 51%) 50% 0/4px 100% no-repeat,
-    repeating-linear-gradient(90deg, transparent 0 46%, #bdbdbd 46% 54%, transparent 54% 100%);
-  opacity:.25;
-}
-.map .tree{
-  position:absolute; font-size:28px; opacity:.85;
-}
-.tree.t1{left:14%; top:18%}
-.tree.t2{left:68%; top:22%}
-.tree.t3{left:58%; top:55%}
-.tree.t4{left:22%; top:62%}
-.tree.t5{left:76%; top:70%}
-.tree.t6{left:40%; top:35%}
-.marker{
-  position:absolute; left:50%; top:52%; transform:translate(-50%,-50%);
-  width:16px; height:16px; background:#e41313; border-radius:50%;
-  box-shadow:0 0 0 3px #fff inset, 0 0 0 1.5px #aa0a0a inset;
-}
-.marker::after{
-  content:""; position:absolute; left:50%; top:90%;
-  transform:translateX(-50%);
-  width:0;height:0;
-  border-left:7px solid transparent; border-right:7px solid transparent;
-  border-top:14px solid #e41313;
-}
+  /* Contenedor principal */
+  .dashboard-container {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    padding: 20px;
+    min-height: 0;
+  }
 
-/* Right panel */
-.right .stack{display:grid; gap:12px}
-.right .small-card{
-  height:54px; background:#dcdcdc; border:1.5px solid var(--g400);
-  border-radius:10px;
-}
-.right .profile-hold{
-  display:grid; place-items:center; padding:8px;
-  background:#fff; border:1.5px solid var(--g400);
-  border-radius:var(--soft-radius); margin-bottom:12px;
-}
+  /* ---------- Panel Izquierdo: Agenda --------- */
+  .agenda-panel {
+    border: 1px solid #aad1ff;
+    border-radius: 8px;
+    padding: 15px;
+    width: 320px;
+    background: #e0e2e7;
+    box-shadow: 0 0 3px rgba(0, 0, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+    overflow-y: auto;
+  }
 
-/* Footer */
-.footer{
-  display:grid; place-items:center;
-}
-.footer .brand{
-  min-height:64px; width:100%;
-  display:grid; place-items:center;
-  background:#e0e0e0; border:1.5px solid var(--g400);
-  border-radius:12px; font-size:28px; font-weight:900; letter-spacing:1px;
-}
+  /* Icono + en círculo negro, top-left */
+  .agenda-panel .icon-add {
+    background: black;
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+  }
 
-/* Slight responsiveness */
-@media (max-width:1100px){
-  .main{grid-template-columns: 300px 1fr 240px;}
-}
-@media (max-width:900px){
-  .header{grid-template-columns:1fr}
-  .header-right{justify-content:flex-start}
-  .main{grid-template-columns:1fr; }
-}
+  /* Título AGENDA */
+  .agenda-panel .title {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+  }
+
+  /* Botones barberos y favoritos */
+  .btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    background: #b2b2b2;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .btn.hover,
+  .btn:focus,
+  .btn:hover {
+    background: #999;
+  }
+
+  /* Estrella al lado derecho (favoritos) */
+  .star-favorite {
+    background: #b2b2b2;
+    width: 30px;
+    height: 24px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  /* Lista de barberos */
+  .barber-list {
+    border: 2px solid #7f8ff4;
+    border-radius: 6px;
+    padding: 7px;
+    background: #c3c3c3;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .barber-item {
+    background: #a5a5a5;
+    border-radius: 10px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .barber-item .icon-star {
+    font-weight: bold;
+  }
+
+  .barber-item .icon-arrows {
+    font-size: 10px;
+    margin-right: 8px;
+    user-select: none;
+  }
+
+  /* Panel inferior con barber name + recuadro */
+  .barber-detail {
+    background: #a5a5a5;
+    border-radius: 10px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .barber-detail .name-label {
+    background: #7f8ff4;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px 15px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .barber-detail .photo-box {
+    background: #888888;
+    border-radius: 8px;
+    height: 100px;
+    position: relative;
+  }
+
+  /* Icono pequeño en esquina inferior derecha */
+  .barber-detail .photo-box .icon-edit {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  /* ---------- Panel Central: Mapa --------- */
+  .map-panel {
+    flex: 1;
+    position: relative;
+    border: 3px solid #000;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  /* Barra búsqueda */
+  .search-box {
+    display: flex;
+    align-items: center;
+    background: #ddd;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin: 10px 15px 15px 15px;
+    flex-shrink: 0;
+  }
+
+  .search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+    padding-left: 8px;
+  }
+
+  .search-box .icon-search {
+    font-size: 18px;
+    color: #999999;
+  }
+
+  /* Imagen del mapa - simulada con SVG simplificado */
+  .map-image {
+    position: relative;
+    flex: 1;
+    background: #ddd;
+    background-image:
+      linear-gradient(to right, transparent 33%, #aaa 33%, #aaa 34%, transparent 34%),
+      linear-gradient(to right, transparent 66%, #aaa 66%, #aaa 67%, transparent 67%),
+      linear-gradient(to bottom, transparent 33%, #aaa 33%, #aaa 34%, transparent 34%),
+      linear-gradient(to bottom, transparent 66%, #aaa 66%, #aaa 67%, transparent 67%);
+    background-size: 33.33% 100%, 33.33% 100%, 100% 33.33%, 100% 33.33%;
+    background-position: top left, top right, top left, bottom left;
+    background-repeat: no-repeat;
+    border-radius: 0 0 8px 8px;
+  }
+
+  /* Puntos de árboles */
+  .tree {
+    width: 15px;
+    height: 25px;
+    background: #2f8f58;
+    border-radius: 50% 50% 10% 10% / 100% 100% 20% 20%;
+    position: absolute;
+  }
+  .tree::after {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 10px;
+    background: #3d372b;
+    margin: 0 auto;
+    border-radius: 0 0 50% 50%;
+  }
+
+  /* Posiciones aproximadas de árboles */
+  .tree1 {top: 15%; left: 25%;}
+  .tree2 {top: 40%; left: 45%;}
+  .tree3 {top: 50%; left: 55%;}
+  .tree4 {top: 25%; left: 65%;}
+  .tree5 {top: 65%; left: 70%;}
+
+  /* Marcador pin rojo */
+  .pin-location {
+    width: 22px;
+    height: 30px;
+    background: red;
+    border-radius: 50% 50% 50% 50%;
+    position: absolute;
+    top: 55%;
+    left: 45%;
+  }
+  .pin-location::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    top: 5px;
+    left: 6px;
+  }
+
+  /* Panel derecho: Perfil usuario */
+  .user-panel {
+    width: 150px;
+    border: 2px solid #f18282;
+    border-radius: 8px;
+    padding: 10px;
+    background: #c1bdbd;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    flex-shrink: 0;
+    overflow-y: auto;
+  }
+
+  /* Foto usuario */
+  .user-photo {
+    width: 84px;
+    height: 84px;
+    border-radius: 10px;
+    background: #000;
+    position: relative;
+    border: 4px solid black;
+  }
+
+  /* Iconos usuario arriba */
+  .user-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+  .user-icons .icon-person {
+    font-size: 18px;
+    background: white;
+    padding: 3px;
+    border-radius: 40%;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .user-icons .icon-edit {
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  /* Caja gris arriba dentro user panel */
+  .user-info-box {
+    background: #aaa;
+    width: 100%;
+    height: 30px;
+    border-radius: 8px;
+  }
+  .user-info-box.small {
+    height: 20px;
+  }
+
+  /* Caja gris grande */
+  .user-info-box.large {
+    height: 70px;
+  }
+
+  /* ---------- Footer --------- */
+  .footer-barberin {
+    background: #ccc;
+    border-radius: 6px 6px 0 0;
+    padding: 15px;
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    flex-shrink: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .dashboard-container {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+    }
+    
+    .agenda-panel,
+    .user-panel {
+      width: 100%;
+    }
+    
+    .map-panel {
+      min-height: 300px;
+    }
+  }
