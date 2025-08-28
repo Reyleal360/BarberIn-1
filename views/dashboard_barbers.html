@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARBERIN - Dashboard Barber</title>
+    <link rel="stylesheet" href="./css/dashboard_barbers.css">
+   
+</head>
+<body>
+    <div class="dashboard-header">Dashboard Barber</div>
+    
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">logo Kcoda</div>
+            <div class="barber-name-container">
+                <div class="barber-name">BARBER NAME</div>
+            </div>
+        </div>
+        <div class="header-icons">
+            <div class="icon-row">
+                <div class="icon">📋</div>
+                <div class="icon">📋</div>
+            </div>
+            <div class="icon-row">
+                <div class="icon">✏️</div>
+                <div class="icon">🔔</div>
+                <div class="icon">☰</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Columna Izquierda - Appointments -->
+        <div class="column appointments-column">
+            <div class="column-title">APPOINTMENTS</div>
+            <div class="appointment-card">
+                <span>APPOINTMENT DATA</span>
+                <button class="btn-ver">ver</button>
+            </div>
+            <div class="appointment-card">
+                <span>APPOINTMENT DATA</span>
+                <button class="btn-ver">ver</button>
+            </div>
+            <div class="appointment-card">
+                <span>APPOINTMENT DATA</span>
+                <button class="btn-ver">ver</button>
+            </div>
+            <div class="appointment-card">
+                <span>APPOINTMENT DATA</span>
+                <button class="btn-ver">ver</button>
+            </div>
+        </div>
+
+        <!-- Columna Central - Contenido Principal -->
+        <div class="column content-column">
+            <!-- Módulos superiores -->
+            <div class="content-modules">
+                <div class="module horarios-module">
+                    <div class="module-title">Horarios</div>
+                    <button class="edit-btn-small">✏️</button>
+                    <div class="horario-slots">
+                        <div class="horario-slot">7:00 am<br>10:00 pm</div>
+                        <div class="horario-slot">7:00 am<br>10:00 pm</div>
+                    </div>
+                </div>
+                
+                <div class="module disponibilidad-module">
+                    <div class="module-title">disponibilidad</div>
+                    <div class="disponibilidad-list">
+                        <div class="barber-status">
+                            <div class="barber-avatar-small"></div>
+                            <div class="status-indicator ocupado-indicator"></div>
+                            <span class="status-text ocupado">ocupado</span>
+                        </div>
+                        <div class="barber-status">
+                            <div class="barber-avatar-small"></div>
+                            <div class="status-indicator disponible-indicator"></div>
+                            <span class="status-text disponible">disponible</span>
+                        </div>
+                        <div class="barber-status">
+                            <div class="barber-avatar-small"></div>
+                            <div class="status-indicator disponible-indicator"></div>
+                            <span class="status-text disponible">disponible</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="map-placeholder">
+                        <div class="map-marker">📍</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección inferior -->
+            <div class="content-bottom">
+                <div class="barbers-profiles">
+                    <div class="barber-profile">
+                        <div class="profile-edit">✏️</div>
+                        <div class="avatar">
+                            <div style="width: 80px; height: 80px; background: linear-gradient(45deg, #f0c674, #e6ac39); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">👤</div>
+                        </div>
+                        <button class="btn-profile">PROFILE</button>
+                    </div>
+                    <div class="barber-profile">
+                        <div class="profile-edit">✏️</div>
+                        <div class="avatar">
+                            <div style="width: 80px; height: 80px; background: linear-gradient(45deg, #d4925a, #c07d47); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">👤</div>
+                        </div>
+                        <button class="btn-profile">PROFILE</button>
+                    </div>
+                    <div class="barber-profile">
+                        <div class="profile-edit">✏️</div>
+                        <div class="avatar">
+                            <div style="width: 80px; height: 80px; background: linear-gradient(45deg, #8b4513, #654321); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">👤</div>
+                        </div>
+                        <button class="btn-profile">PROFILE</button>
+                    </div>
+                </div>
+                <div class="add-barber">
+                    <div class="add-icon">+</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna Derecha - Products -->
+        <div class="column products-column">
+            <div class="column-title">PRODUCTS</div>
+            <div class="products-grid">
+                <div class="product-item">
+                    <div class="product-icon">🛍️</div>
+                    <div class="product-actions">
+                        <div class="action-icon">✏️</div>
+                        <div class="action-icon">🔍</div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-icon">🛍️</div>
+                    <div class="product-actions">
+                        <div class="action-icon">✏️</div>
+                        <div class="action-icon">🔍</div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-icon">🛍️</div>
+                    <div class="product-actions">
+                        <div class="action-icon">✏️</div>
+                        <div class="action-icon">🔍</div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-icon">🛍️</div>
+                    <div class="product-actions">
+                        <div class="action-icon">✏️</div>
+                        <div class="action-icon">🔍</div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-icon">🛍️</div>
+                    <div class="product-actions">
+                        <div class="action-icon">✏️</div>
+                        <div class="action-icon">🔍</div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-icon">🛍️</div>
+                    <div class="product-actions">
+                        <div class="action-icon">✏️</div>
+                        <div class="action-icon">🔍</div>
+                    </div>
+                </div>
+                <div class="add-product">
+                    <div class="add-product-icon">+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        BARBERIN
+    </footer>
+</body>
+</html>
