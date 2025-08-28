@@ -5,6 +5,7 @@
         }
 
         body {
+        
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
             min-height: 100vh;
@@ -137,7 +138,7 @@
             background-color: white;
             border: 1px solid #ddd;
             border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             min-width: 100px;
             z-index: 100;
             display: none;
@@ -168,14 +169,15 @@
 
         .login-section {
             display: flex;
+            flex-direction: column;
             align-items: center;
             gap: 15px;
-            margin: 30px 0;
+            margin: 30px 0
         }
 
         .btn-login {
-            background-color: #dc3545;
-            color: black;
+            background-color: #e53e3e;
+            color: white;
             border: none;
             padding: 15px 40px;
             border-radius: 8px;
@@ -183,10 +185,11 @@
             font-weight: bold;
             cursor: pointer;
             transition: background-color 0.3s ease;
+
         }
 
         .btn-login:hover {
-            background-color: #c82333;
+            background-color: #ff0019;
         }
 
         .google-login {
@@ -231,12 +234,12 @@
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-            
+
             .side-image {
                 height: 200px;
                 order: 2;
             }
-            
+
             .login-container {
                 order: 1;
                 padding: 30px 20px;
@@ -247,29 +250,29 @@
             .main-title h1 {
                 font-size: 2.5rem;
             }
-            
+
             .app-slogan {
                 font-size: 1.2rem;
             }
-            
+
             .login-container {
                 padding: 25px 15px;
             }
-            
+
             .login-section {
                 flex-direction: column;
                 align-items: stretch;
                 gap: 15px;
             }
-            
+
             .btn-login {
                 width: 100%;
             }
-            
+
             .google-login {
                 align-self: center;
             }
-            
+
             .form-links {
                 flex-direction: column;
                 gap: 10px;
@@ -281,11 +284,11 @@
             body {
                 padding: 10px;
             }
-            
+
             .main-title h1 {
                 font-size: 2rem;
             }
-            
+
             .login-container {
                 padding: 20px 10px;
             }
