@@ -1,0 +1,430 @@
+ * {
+
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+
+     font-family: 'Montserrat', Arial, sans-serif;
+     background-color: #f5f5f5;
+     min-height: 100vh;
+     padding: 0;
+ }
+
+ .dashboard {
+     width: 100%;
+     max-width: none;
+     margin: 0;
+     background-color: white;
+     min-height: 100vh;
+     box-shadow: none;
+ }
+
+ /* Header Styles */
+ header {
+     display: flex;
+     align-items: center;
+     padding: 20px;
+     border-bottom: 2px solid #ddd;
+ }
+
+ .logo {
+     flex: 0 0 150px;
+     font-weight: bold;
+     color: #333;
+ }
+
+ .barber-name {
+     flex: 1;
+     text-align: center;
+     margin: 0 20px;
+ }
+
+ .barber-name-box {
+     background-color: #d3d3d3;
+     padding: 15px 30px;
+     border: 2px solid #ff6b6b;
+     border-radius: 5px;
+     font-size: 24px;
+     font-weight: bold;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+ }
+
+ .qualification {
+     flex: 0 0 150px;
+     text-align: center;
+ }
+
+ .qualification-title {
+     background-color: #666;
+     color: white;
+     padding: 8px 12px;
+     border-radius: 20px;
+     font-size: 12px;
+     font-weight: bold;
+     text-transform: uppercase;
+     margin-bottom: 10px;
+ }
+
+ .rating {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .thumbs-up {
+     font-size: 24px;
+     margin-bottom: 5px;
+ }
+
+ .stars {
+     color: #ffd700;
+     font-size: 20px;
+ }
+
+ /* Main Content */
+ .main-content {
+     display: grid;
+     grid-template-columns: 350px 1fr 300px;
+     /* Igual que dashboard_barbers */
+     gap: 20px;
+     /* Igual que dashboard_barbers */
+     padding: 20px;
+     /* Igual que dashboard_barbers */
+     min-height: calc(100vh - 170px);
+ }
+
+ /* Left Column - Appointments */
+ .appointments {
+     flex: 0 0 280px;
+     padding: 20px;
+     background-color: #f8f8f8;
+     border-right: 2px solid #ddd;
+ }
+
+ .appointments h2 {
+     font-weight: bold;
+     text-transform: uppercase;
+     margin-bottom: 20px;
+     font-size: 16px;
+     text-decoration: underline;
+ }
+
+ .appointment-card {
+     background-color: #d3d3d3;
+     padding: 15px;
+     margin-bottom: 15px;
+     border-radius: 5px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .appointment-text {
+     font-size: 12px;
+     font-weight: bold;
+     text-transform: uppercase;
+ }
+
+ .take-button {
+     background-color: #28a745;
+     color: white;
+     border: none;
+     padding: 5px 12px;
+     border-radius: 15px;
+     font-size: 10px;
+     font-weight: bold;
+     text-transform: uppercase;
+     cursor: pointer;
+ }
+
+ /* Center Column - Profile */
+ .profile {
+     flex: 1;
+     padding: 20px;
+    
+ }
+
+ .profile-top {
+     display: flex;
+     gap: 20px;
+     margin-bottom: 20px;
+ }
+
+ .avatar-section {
+     flex: 0 0 150px;
+ }
+
+ .avatar-box {
+     width: 120px;
+     height: 120px;
+     border: 4px solid #333;
+     border-radius: 10px;
+     background-color: #d3d3d3;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 15px;
+     overflow: hidden;
+ }
+
+ .avatar-image {
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(45deg, #ffb366, #ff8c42);
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 40px;
+ }
+
+ .name-box {
+     background-color: #d3d3d3;
+     padding: 10px 15px;
+     border-radius: 5px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-weight: bold;
+     text-transform: uppercase;
+ }
+
+ .edit-icon {
+     font-size: 14px;
+     cursor: pointer;
+ }
+
+ .info-boxes {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+ }
+
+ .description-box {
+     background-color: #d3d3d3;
+     padding: 20px;
+     border-radius: 5px;
+     border: 2px solid #4a90e2;
+     height: 80px;
+     display: flex;
+     align-items: center;
+     position: relative;
+ }
+
+ .specialties-box {
+     background-color: #d3d3d3;
+     padding: 20px;
+     border-radius: 5px;
+     border: 2px solid #ff6b6b;
+     height: 80px;
+     display: flex;
+     align-items: center;
+     position: relative;
+ }
+
+ .box-title {
+     position: absolute;
+     top: 5px;
+     left: 10px;
+     font-size: 12px;
+     font-weight: bold;
+     text-transform: uppercase;
+ }
+
+ .box-edit-icon {
+     position: absolute;
+     top: 5px;
+     right: 10px;
+     font-size: 14px;
+     cursor: pointer;
+ }
+
+ .haircut-references {
+     margin-top: 30px;
+ }
+
+ .haircut-references h3 {
+     background-color: #666;
+     color: white;
+     padding: 8px 15px;
+     border-radius: 5px;
+     font-size: 14px;
+     font-weight: bold;
+     text-transform: uppercase;
+     margin-bottom: 15px;
+     display: inline-block;
+ }
+
+ .references-grid {
+     display: flex;
+     gap: 15px;
+     flex-wrap: wrap;
+ }
+
+ .reference-item {
+     flex: 1;
+     min-width: 120px;
+ }
+
+ .reference-image {
+     width: 100%;
+     height: 100px;
+     background-color: #d3d3d3;
+     border-radius: 5px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 10px;
+     font-size: 24px;
+ }
+
+ .reference-description {
+     padding: 8px 12px;
+     text-align: center;
+     border-radius: 15px;
+     font-size: 10px;
+     font-weight: bold;
+     text-transform: uppercase;
+ }
+
+ .desc-blue {
+     background-color: #4a90e2;
+     color: white;
+ }
+
+ .desc-red {
+     background-color: #ff6b6b;
+     color: white;
+ }
+
+ /* Right Column - Ranking */
+ .ranking {
+     flex: 0 0 200px;
+     padding: 20px;
+     background-color: #f8f8f8;
+     border-left: 2px solid #ddd;
+ }
+
+ .ranking-title {
+     background-color: #666;
+     color: white;
+     padding: 8px 12px;
+     border-radius: 20px;
+     font-size: 12px;
+     font-weight: bold;
+     text-transform: uppercase;
+     margin-bottom: 20px;
+     text-align: center;
+ }
+
+ .ranking-box {
+     background-color: #d3d3d3;
+     height: 300px;
+     border-radius: 5px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 48px;
+     font-weight: bold;
+ }
+
+ /* Footer */
+ footer {
+     background-color: #666;
+     padding: 30px 20px;
+     text-align: center;
+ }
+
+ .footer-title {
+     color: white;
+     font-size: 32px;
+     font-weight: bold;
+     text-transform: uppercase;
+     letter-spacing: 3px;
+ }
+
+ /* Responsive Design */
+ @media (max-width: 1024px) {
+     .main-content {
+         flex-direction: column;
+     }
+
+     .appointments,
+     .ranking {
+         flex: none;
+         border: none;
+         border-bottom: 2px solid #ddd;
+     }
+
+     .profile-top {
+         flex-direction: column;
+     }
+
+     .references-grid {
+         justify-content: center;
+     }
+ }
+
+ @media (max-width: 768px) {
+     .dashboard {
+         width: 100%;
+     }
+
+     header {
+         flex-direction: column;
+         gap: 15px;
+     }
+
+     .logo,
+     .qualification {
+         flex: none;
+     }
+
+     .barber-name-box {
+         font-size: 18px;
+         padding: 10px 20px;
+     }
+
+     .references-grid {
+         flex-direction: column;
+     }
+
+     .footer-title {
+         font-size: 24px;
+     }
+ }
+
+ @media (max-width: 480px) {
+     body {
+         padding: 0;
+     }
+
+     .dashboard {
+         width: 100%;
+     }
+
+     .appointments,
+     .profile,
+     .ranking {
+         padding: 15px;
+     }
+
+     .avatar-box {
+         width: 100px;
+         height: 100px;
+     }
+
+     .reference-image {
+         height: 80px;
+     }
+
+     .ranking-box {
+         height: 200px;
+         font-size: 32px;
+     }
+ }
