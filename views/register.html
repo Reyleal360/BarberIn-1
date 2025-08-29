@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Barberin - Registro</title>
+<link rel="stylesheet" href="./css/register.css">
+
+</head>
+<body>
+
+<div class="top-nav">
+  <div class="nav-left">Register usuario</div>
+  <div class="nav-right">
+    <button class="toggle-btn" onclick="toggleRegisterMode()">
+      <span id="toggle-text">Registro para Barberías</span>
+    </button>
+  </div>
+</div>
+
+<div class="main-container">
+  <!-- Formulario de Usuario -->
+  <div id="user-register" class="register-panel">
+    <div class="panel-header">
+      <div class="logo">✚</div>
+      <div class="brand-title">BARBERIN</div>
+    </div>
+    
+    <div class="register-subtitle">REGÍSTRATE</div>
+    
+    <div class="form-layout">
+      <div class="photo-section">
+        <div class="photo-placeholder">📷</div>
+        <div class="photo-placeholder small">📷</div>
+      </div>
+      
+      <div class="form-section">
+        <div class="form-row">
+          <div class="form-group">
+            <label>NOMBRE (S)</label>
+            <input type="text" placeholder="">
+          </div>
+          <div class="form-group">
+            <label>APELLIDO (S)</label>
+            <input type="text" placeholder="">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>CORREO</label>
+            <input type="email" placeholder="">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>TELÉFONO</label>
+            <input type="tel" placeholder="">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>CONTRASEÑA</label>
+            <input type="password" placeholder="">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>DIRECCIÓN</label>
+            <input type="text" placeholder="">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>EDAD</label>
+            <select>
+              <option>Seleccionar...</option>
+              <option>18-25</option>
+              <option>26-35</option>
+              <option>36-45</option>
+              <option>46+</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-actions">
+          <button class="register-btn">REGISTRAR</button>
+          <button class="google-btn">
+            <span class="google-icon">G</span>
+            Registrarse con Google
+          </button>
+          <span class="login-link">¿ Ya te registraste ?</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Formulario de Barbero -->
+  <div id="barber-register" class="register-panel hidden">
+    <div class="panel-header">
+      <div class="logo">✚</div>
+      <div class="brand-title">BARBERIN</div>
+    </div>
+    
+    <div class="register-subtitle">REGÍSTRATE</div>
+    
+    <div class="form-layout">
+      <div class="photo-section">
+        <div class="photo-placeholder">📷</div>
+        <div class="photo-placeholder small">📷</div>
+      </div>
+      
+      <div class="form-section">
+        <div class="form-row">
+          <div class="form-group">
+            <label>NOMBRE DE LA BARBERIA</label>
+            <input type="text" placeholder="">
+          </div>
+          <div class="form-group">
+            <label>EMAIL DE LA BARBERIA</label>
+            <input type="email" placeholder="">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>NÚMERO DE CONTACTO DE BARBERIA</label>
+            <input type="tel" placeholder="">
+          </div>
+          <div class="form-group">
+            <label>CONTRASEÑA</label>
+            <input type="password" placeholder="">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>NOMBRE DEL RESPONSABLE</label>
+            <input type="text" placeholder="">
+          </div>
+          <div class="form-group">
+            <label>DOCUMENTO IDENT.</label>
+            <input type="text" placeholder="">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>TELÉFONO DE CONTACTO DEL DUEÑO</label>
+            <input type="tel" placeholder="">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group full-width">
+            <label>DIRECCIÓN DE LA BARBERIA</label>
+            <textarea placeholder=""></textarea>
+          </div>
+        </div>
+        
+        <div class="form-actions">
+          <button class="register-btn">REGISTRAR</button>
+          <button class="google-btn">
+            <span class="google-icon">G</span>
+            Registrarse con Google
+          </button>
+          <span class="login-link">¿Ya te registraste?</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+let isUserMode = true;
+
+function toggleRegisterMode() {
+  const userPanel = document.getElementById('user-register');
+  const barberPanel = document.getElementById('barber-register');
+  const toggleText = document.getElementById('toggle-text');
+  const navLeft = document.querySelector('.nav-left');
+  
+  if (isUserMode) {
+    // Cambiar a modo barbero
+    userPanel.classList.add('hidden');
+    barberPanel.classList.remove('hidden');
+    toggleText.textContent = 'Registro para Usuarios';
+    navLeft.textContent = 'Register Barber';
+    isUserMode = false;
+  } else {
+    // Cambiar a modo usuario
+    barberPanel.classList.add('hidden');
+    userPanel.classList.remove('hidden');
+    toggleText.textContent = 'Registro para Barberías';
+    navLeft.textContent = 'Register usuario';
+    isUserMode = true;
+  }
+}
+
+// Funcionalidad adicional para los formularios
+document.addEventListener('DOMContentLoaded', function() {
+  // Agregar event listeners para los botones de registro
+  const registerBtns = document.querySelectorAll('.register-btn');
+  registerBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const currentMode = isUserMode ? 'usuario' : 'barbería';
+      alert(`Registro de ${currentMode} - Funcionalidad pendiente de implementar`);
+    });
+  });
+  
+  // Event listeners para login links
+  const loginLinks = document.querySelectorAll('.login-link');
+  loginLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      alert('Redirigir a página de login');
+    });
+  });
+  
+  // Event listener para botón de Google
+  const googleBtns = document.querySelectorAll('.google-btn');
+  googleBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const currentMode = isUserMode ? 'usuario' : 'barbería';
+      alert(`Registro con Google para ${currentMode} - Funcionalidad pendiente de implementar`);
+    });
+  });
+});
+</script>
+
+</body>
+</html>
