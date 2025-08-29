@@ -1,15 +1,20 @@
-  /* Reset básico */
+/* =================================================================
+   GLOBAL RESET AND BASE STYLES
+   ================================================================= */
+/* Universal reset - removes default margins, padding and sets consistent box-sizing */
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
 
+/* Full viewport height with hidden overflow for fixed layout */
   html, body {
     height: 100vh;
     overflow: hidden;
   }
 
+/* Body base styles - sets main font, background and flex layout */
   body {
     font-family: Arial, sans-serif;
     background: #e8e8e8;
@@ -17,7 +22,10 @@
     flex-direction: column;
   }
 
-  /* Navegación superior */
+/* =================================================================
+   TOP NAVIGATION SECTION
+   ================================================================= */
+/* Top navigation bar - horizontal layout with logo and toggle button */
   .top-nav {
     display: flex;
     justify-content: space-between;
@@ -27,16 +35,19 @@
     flex-shrink: 0;
   }
 
+/* Navigation left section - logo/brand text area */
   .nav-left {
     font-size: 14px;
     color: #666;
   }
 
+/* Navigation right section - action buttons area */
   .nav-right {
     display: flex;
     align-items: center;
   }
 
+/* Toggle button - yellow button for mode switching */
   .toggle-btn {
     background: #ffeb3b;
     border: none;
@@ -47,7 +58,10 @@
     font-size: 12px;
   }
 
-  /* Contenedor principal */
+/* =================================================================
+   MAIN CONTAINER LAYOUT
+   ================================================================= */
+/* Main container - centered layout for registration panel */
   .main-container {
     flex: 1;
     display: flex;
@@ -57,7 +71,10 @@
     min-height: 0;
   }
 
-  /* Panel de registro */
+/* =================================================================
+   REGISTRATION PANEL SECTION
+   ================================================================= */
+/* Registration panel - white bordered container for registration form */
   .register-panel {
     background: white;
     border: 2px solid #ccc;
@@ -69,7 +86,7 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
-  /* Header del panel */
+/* Panel header - horizontal layout for logo and brand title */
   .panel-header {
     display: flex;
     align-items: center;
@@ -78,6 +95,7 @@
     margin-bottom: 30px;
   }
 
+/* Logo - square black container with brand initial */
   .logo {
     width: 50px;
     height: 50px;
@@ -91,6 +109,7 @@
     font-size: 24px;
   }
 
+/* Brand title - large italic brand name */
   .brand-title {
     font-family: Arial, sans-serif;
     font-weight: bold;
@@ -99,6 +118,7 @@
     color: #000;
   }
 
+/* Registration subtitle - underlined section heading */
   .register-subtitle {
     text-align: center;
     font-weight: bold;
@@ -107,14 +127,17 @@
     text-decoration: underline;
   }
 
-  /* Layout del formulario */
+/* =================================================================
+   FORM LAYOUT SECTION
+   ================================================================= */
+/* Form layout - horizontal layout for photo section and form fields */
   .form-layout {
     display: flex;
     gap: 30px;
     align-items: flex-start;
   }
 
-  /* Columna izquierda - foto */
+/* Photo section - vertical layout for profile photo upload */
   .photo-section {
     display: flex;
     flex-direction: column;
@@ -122,6 +145,7 @@
     gap: 15px;
   }
 
+/* Photo placeholder - gray container for profile photo preview */
   .photo-placeholder {
     width: 150px;
     height: 120px;
@@ -135,30 +159,38 @@
     color: #666;
   }
 
+/* Small photo placeholder variant - smaller version for mobile */
   .photo-placeholder.small {
     width: 120px;
     height: 90px;
   }
 
-  /* Formularios */
+/* =================================================================
+   FORM FIELDS SECTION
+   ================================================================= */
+/* Form section - flexible area for form inputs */
   .form-section {
     flex: 1;
   }
 
+/* Form row - horizontal layout for multiple form fields */
   .form-row {
     display: flex;
     gap: 15px;
     margin-bottom: 15px;
   }
 
+/* Form group - container for individual form field */
   .form-group {
     flex: 1;
   }
 
+/* Full width form group - takes up more space in row */
   .form-group.full-width {
     flex: 2;
   }
 
+/* Form labels - bold labels for form inputs */
   label {
     display: block;
     font-size: 12px;
@@ -167,6 +199,7 @@
     color: #333;
   }
 
+/* Form inputs - styled inputs, selects and textareas */
   input[type="text"],
   input[type="email"],
   input[type="password"],
@@ -181,16 +214,21 @@
     background: white;
   }
 
+/* Select inputs - pointer cursor for dropdowns */
   select {
     cursor: pointer;
   }
 
+/* Textarea inputs - vertical resize only with minimum height */
   textarea {
     resize: vertical;
     min-height: 60px;
   }
 
-  /* Botones de acción */
+/* =================================================================
+   FORM ACTIONS SECTION
+   ================================================================= */
+/* Form actions - horizontal layout for action buttons */
   .form-actions {
     margin-top: 25px;
     display: flex;
@@ -198,6 +236,7 @@
     align-items: center;
   }
 
+/* Register button - red primary action button */
   .register-btn {
     background: #f44336;
     color: white;
@@ -209,10 +248,12 @@
     font-size: 14px;
   }
 
+/* Register button hover - darker red on hover */
   .register-btn:hover {
     background: #d32f2f;
   }
 
+/* Google button - white button with black border for Google registration */
   .google-btn {
     background: white;
     border: 2px solid #000;
@@ -227,14 +268,17 @@
     color: #333;
   }
 
+/* Google button hover - light gray background on hover */
   .google-btn:hover {
     background: #f5f5f5;
   }
 
+/* Google icon - icon within Google button */
   .google-icon {
     font-size: 18px;
   }
 
+/* Login link - blue underlined link to login page */
   .login-link {
     color: #4285f4;
     font-size: 12px;
@@ -243,12 +287,18 @@
     margin-left: auto;
   }
 
-  /* Estado oculto */
+/* =================================================================
+   UTILITY CLASSES
+   ================================================================= */
+/* Hidden state - utility class to hide elements */
   .hidden {
     display: none;
   }
 
-  /* Responsive */
+/* =================================================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ================================================================= */
+/* Mobile breakpoint - stacks form layout vertically */
   @media (max-width: 768px) {
     .form-layout {
       flex-direction: column;
