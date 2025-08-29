@@ -88,7 +88,7 @@
  /* Main Content */
  .main-content {
      display: grid;
-     grid-template-columns: 350px 1fr 300px;
+     grid-template-columns: 1000px 1fr ;
      /* Igual que dashboard_barbers */
      gap: 20px;
      /* Igual que dashboard_barbers */
@@ -144,7 +144,7 @@
  /* Center Column - Profile */
  .profile {
      flex: 1;
-     padding: 20px;
+     margin: 10px;
     
  }
 
@@ -304,8 +304,8 @@
 
  /* Right Column - Ranking */
  .ranking {
-     flex: 0 0 200px;
-     padding: 20px;
+     flex:   200px;
+     padding: 10px;
      background-color: #f8f8f8;
      border-left: 2px solid #ddd;
  }
