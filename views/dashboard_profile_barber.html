@@ -1,106 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barber Dashboard</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="./css/dashboard_profile_barber.css">
-</head>
-<body>
-    <div class="dashboard">
-        <!-- Header -->
-        <header>
-            <div class="logo">Kcoda logo</div>
-            <div class="barber-name">
-                <div class="barber-name-box">BARBER NAME</div>
-            </div>
-            <div class="qualification">
-                <div class="qualification-title">QUALIFICATION</div>
-                <div class="rating">
-                    <div class="thumbs-up">👍</div>
-                    <div class="stars">★★</div>
-                </div>
-            </div>
-        </header>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil del Barbero</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/BarberIn/views/css/dashboard_profile_barber.css"
+    />
+  </head>
 
-        <!-- Main Content -->
-        <div class="main-content">
-            <!-- Left Column - Appointments -->
-            <aside class="appointments">
-                <h2>Appointments</h2>
-                <div class="appointment-card">
-                    <span class="appointment-text">Client Appointment</span>
-                    <button class="take-button">TAKE</button>
-                </div>
-                <div class="appointment-card">
-                    <span class="appointment-text">Client Appointment 1</span>
-                    <button class="take-button">TAKE</button>
-                </div>
-                <div class="appointment-card">
-                    <span class="appointment-text">Client Appointment 2</span>
-                    <button class="take-button">TAKE</button>
-                </div>
-                <div class="appointment-card">
-                    <span class="appointment-text">Client Appointment 3</span>
-                    <button class="take-button">TAKE</button>
-                </div>
-            </aside>
-
-            <!-- Center Column - Profile -->
-            <main class="profile">
-                <div class="profile-top">
-                    <div class="avatar-section">
-                        <div class="avatar-box">
-                            <div class="avatar-image">👤</div>
-                        </div>
-                        <div class="name-box">
-                            <span>NAME</span>
-                            <span class="edit-icon">✏️</span>
-                        </div>
-                    </div>
-                    <div class="info-boxes">
-                        <div class="description-box">
-                            <span class="box-title">Descriptions</span>
-                            <span class="box-edit-icon">✏️</span>
-                        </div>
-                        <div class="specialties-box">
-                            <span class="box-title">Specialties</span>
-                            <span class="box-edit-icon">✏️</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="haircut-references">
-                    <h3>Haircut References</h3>
-                    <div class="references-grid">
-                        <div class="reference-item">
-                            <div class="reference-image">🖼️</div>
-                            <div class="reference-description desc-blue">Description</div>
-                        </div>
-                        <div class="reference-item">
-                            <div class="reference-image">🖼️</div>
-                            <div class="reference-description desc-red">Description</div>
-                        </div>
-                        <div class="reference-item">
-                            <div class="reference-image">🖼️</div>
-                            <div class="reference-description desc-blue">Description</div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-
-            <!-- Right Column - Ranking -->
-            <aside class="ranking">
-                <div class="ranking-title">RANKING</div>
-                <div class="ranking-box">#1</div>
-            </aside>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="logo">
+          <img src="./img/logos/kcoda.png" alt="Logo KCoda" />
         </div>
+        <h1 class="barber-name">BARBER NAME</h1>
+        <div class="qualification">
+          <span class="badge">Qualification</span>
+          <div class="rating">
+            <span>👍</span>
+            <span class="stars">★★</span>
+          </div>
+        </div>
+      </header>
 
-        <!-- Footer -->
-        <footer>
-            <div class="footer-title">BARBERIN</div>
-        </footer>
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Appointments -->
+        <aside class="appointments">
+          <h2>Citas</h2>
+          <div class="appointment-card">
+            <span>Cliente 1</span>
+            <button class="btn btn-login">Tomar</button>
+          </div>
+          <div class="appointment-card">
+            <span>Cliente 2</span>
+            <button class="btn btn-login">Tomar</button>
+          </div>
+          <div class="appointment-card">
+            <span>Cliente 3</span>
+            <button class="btn btn-login">Tomar</button>
+          </div>
+        </aside>
+
+        <!-- Profile Center -->
+        <main class="profile">
+          <div class="avatar-section">
+            <div class="avatar">👤</div>
+            <div class="name-box">
+              <span>Nombre</span>
+              <span class="edit">✏️</span>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <h3>Descripción ✏️</h3>
+            <p>Texto de ejemplo de la descripción del barbero.</p>
+          </div>
+
+          <div class="info-box">
+            <h3>Especialidades ✏️</h3>
+            <p>Fade, Clásicos, Degradados</p>
+          </div>
+
+          <div class="haircut-references">
+            <h3>Referencias</h3>
+            <div class="references-grid">
+              <div class="reference-card">
+                <div class="ref-img">🖼️</div>
+                <span class="desc-blue">Corte 1</span>
+              </div>
+              <div class="reference-card">
+                <div class="ref-img">🖼️</div>
+                <span class="desc-red">Corte 2</span>
+              </div>
+              <div class="reference-card">
+                <div class="ref-img">🖼️</div>
+                <span class="desc-blue">Corte 3</span>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <!-- Ranking -->
+        <aside class="ranking">
+          <h2>Ranking</h2>
+          <div class="ranking-box">#1</div>
+        </aside>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer-barberin">
+        <div class="main-title" style="display: flex; justify-content: center">
+          <img
+            src="./img/logos/barberin.png"
+            alt="Logo barberin"
+            style="height: 60px; width: 140px"
+          />
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

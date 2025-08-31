@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BARBERIN</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/home.css">
-</head>
-
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/home.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-            <div class="logo">Kcoda logo</div>
-        </div>
+      <!-- Header con logo pequeño KCoda -->
+      <header class="header">
+        <img src="./img/logos/kcoda.png" alt="Logo KCoda" class="logo-kcoda" />
+      </header>
 
-        <div class="main-title">
-            <h1>BARBERIN</h1>
-        </div>
+      <!-- Logo principal -->
+      <div class="main-title">
+        <img
+          src="./img/logos/barberin.png"
+          alt="Logo Barberin"
+          class="logo-barberin"
+        />
+      </div>
 
-        <div class="cards-container">
-            <div class="card"></div>
-            <div class="card"></div>
+      <!-- Sección de tarjetas -->
+      <section class="cards-container">
+        <div class="card">
+          <h3>Servicios</h3>
+          <p>Cortes clásicos, modernos y personalizados con estilo.</p>
         </div>
-
-        <div class="buttons-container">
-            <button class="btn btn-login"><a href="./login.html">Sign In</a></button>
-            <button class="btn btn-signup"><a href="./register.html">Sign Up</a></button>
+        <div class="card">
+          <h3>Reservas</h3>
+          <p>Agenda tu cita fácilmente desde la aplicación.</p>
         </div>
+      </section>
 
-        <div class="info-box">
-            <h2>APP SLOGAN</h2>
-            <p>APP DESCRIPTION</p>
-        </div>
+      <!-- Botones de acción -->
+      <div class="buttons-container">
+        <a href="./login.html" class="btn btn-login">Sign In</a>
+        <a href="./register.html" class="btn btn-signup">Sign Up</a>
+      </div>
 
+      <!-- Info Box -->
+      <div class="info-box">
+        <h2>Estilo & Confianza</h2>
+        <p>Tu barbería de confianza, ahora más cerca de ti.</p>
+      </div>
+
+      <!-- Footer -->
+      <footer>
         <a href="#" class="footer-link">About us</a>
+      </footer>
     </div>
-</body>
-
+  </body>
 </html>
